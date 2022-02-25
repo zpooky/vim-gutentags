@@ -181,6 +181,13 @@ function! gutentags#get_project_file_list_cmd(path) abort
     return ""
 endfunction
 
+function! gutentags#get_project_file_list_cmd_secondary() abort
+    if type(g:gutentags_file_list_command_secondary) == type("")
+        return gutentags#validate_cmd(g:gutentags_file_list_command_secondary)
+    endif
+    return ""
+endfunction
+
 " Finds the first directory with a project marker by walking up from the given
 " file path.
 function! gutentags#get_project_root(path) abort

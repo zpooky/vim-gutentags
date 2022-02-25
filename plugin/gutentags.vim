@@ -59,6 +59,7 @@ let g:gutentags_generate_on_missing = get(g:, 'gutentags_generate_on_missing', 1
 let g:gutentags_generate_on_write = get(g:, 'gutentags_generate_on_write', 1)
 let g:gutentags_generate_on_empty_buffer = get(g:, 'gutentags_generate_on_empty_buffer', 0)
 let g:gutentags_file_list_command = get(g:, 'gutentags_file_list_command', '')
+let g:gutentags_file_list_command_secondary = get(g:, 'gutentags_file_list_command_secondary', '')
 
 let g:gutentags_use_jobs = get(g:, 'gutentags_use_jobs', has('job'))
 
