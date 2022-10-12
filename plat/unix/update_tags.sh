@@ -117,7 +117,8 @@ if [ $INDEX_WHOLE_PROJECT -eq 1 ]; then
             echo "Running file list command, patching for absolute paths"
             echo "eval $FILE_LIST_CMD"
             eval $FILE_LIST_CMD | while read -r l; do
-                echo "${PROJECT_ROOT%/}/${l}"
+              # echo "${PROJECT_ROOT%/}/${l}"
+              echo "$(realpath ${PROJECT_ROOT%/}/${l})"
             done > "${TAGS_FILE}.files"
         fi
         CTAGS_ARGS="${CTAGS_ARGS} -L"

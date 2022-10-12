@@ -143,6 +143,7 @@ function! gutentags#ctags_secondary#generate(proj_dir, tags_file, gen_opts) abor
                     let l:cmd += ['-A']
                 endif
             endif
+            let l:cmd += ['-A']
             let l:cmd += ['-L', '"' . l:file_list_cmd. '"']
         endif
     endif
